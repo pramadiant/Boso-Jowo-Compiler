@@ -1,0 +1,42 @@
+// ==========================================
+// PROGRAM BOSOJOWO SUKSES
+// Menguji seluruh fitur bahasa pemrograman
+// ==========================================
+
+// 1. Deklarasi Fungsi Penjumlahan yang dikalikan dua
+fungsi petung_tambah_ping_loro(a, b) {
+    balekno (a + b) * 2;
+}
+
+// 2. Deklarasi Variabel
+wadah angka_awal = 10;
+ginaris wates = 3; // Menggunakan ginaris (const) karena 'wates' tidak berubah
+
+tulis("--- PROGRAM AWAL BOSOJOWO ---");
+tulis("Angka awal: " + angka_awal);
+
+// 3. Percabangan yen - liyane yen - liyane (if-elif-else)
+yen (angka_awal > 15 lan bener) {
+    tulis("Kondisi bener: angka_awal pancen luwih gede tinimbang limalas!");
+} liyane yen (angka_awal > 5) {
+    tulis("Kondisi bener: angka_awal pancen luwih gede tinimbang limo!");
+} liyane {
+    tulis("Kondisi salah!");
+}
+
+// 4. Perulangan kanggo (for loop)
+tulis("\n--- PERULANGAN KANGGO (FOR LOOP) ---");
+kanggo (wadah i = 0; i < wates; i = i + 1) {
+    wadah hasil = petung_tambah_ping_loro(angka_awal, i);
+    tulis("Indeks perulangan ke-" + i + ", Hasil: " + hasil);
+}
+
+// 5. Perulangan suwene (while loop)
+tulis("\n--- PERULANGAN SUWENE (WHILE LOOP) ---");
+wadah counter = 1;
+suwene (counter <= 2) {
+    tulis("Counter suwene saiki: " + counter);
+    counter = counter + 1;
+}
+
+tulis("\nProgram BosoJowo rampung kanthi sukses!");

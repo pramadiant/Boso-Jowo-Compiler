@@ -1,0 +1,12 @@
+// ==========================================
+// PROGRAM BOSOJOWO ERROR SEMANTIK
+// Menguji penganalisis semantik dalam
+// mendeteksi pelanggaran logika scope / tipe.
+// ==========================================
+
+// 1. Kesalahan: Menggunakan variabel tanpa deklarasi 'wadah'
+tulis(x); 
+
+// 2. Kesalahan: Operasi matematika ilegal pada string
+wadah s = "BosoJowo";
+wadah hasil = s - 10;

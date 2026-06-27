@@ -1,0 +1,2 @@
+ginaris tetepan = 100;
+tetepan = 200; // Harusnya error disini

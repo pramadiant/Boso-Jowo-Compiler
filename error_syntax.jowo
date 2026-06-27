@@ -1,0 +1,12 @@
+// ==========================================
+// PROGRAM BOSOJOWO ERROR SINTAKS
+// Menguji kemampuan parser dalam mendeteksi
+// kesalahan tata bahasa.
+// ==========================================
+
+wadah angka = 15;
+
+// ERROR: Kurang tanda kurung tutup ')' sebelum kurung kurawal buka '{'
+yen (angka > 10 {
+    tulis("Iki ora bakal jalan amarga syntax error");
+}
