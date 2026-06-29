@@ -1,42 +1,173 @@
 // ==========================================
-// PROGRAM BOSOJOWO SUKSES
-// Menguji seluruh fitur bahasa pemrograman
+// PROGRAM BOSOJOWO SUKSES (LENGKAP)
+// Menguji SELURUH fitur bahasa pemrograman
 // ==========================================
 
-// 1. Deklarasi Fungsi Penjumlahan yang dikalikan dua
-fungsi petung_tambah_ping_loro(a, b) {
-    balekno (a + b) * 2;
+/*
+    Komentar multi-line:
+    Program iki nguji kabeh fitur
+    sing didukung dening compiler BosoJowo.
+*/
+
+// ========================================
+// 1. DEKLARASI VARIABEL & KONSTANTA
+// ========================================
+wadah angka = 10;
+wadah nama = "Dito";
+wadah desimal = 3.14;          // Float literal
+ginaris WATES = 5;             // Konstanta (tidak bisa diubah)
+wadah status = bener;          // Boolean true
+wadah mati = salah;            // Boolean false
+
+tulis("=== 1. DEKLARASI VARIABEL & KONSTANTA ===");
+tulis("Nama     : " + nama);
+tulis("Angka    : " + angka);
+tulis("Desimal  : " + desimal);
+tulis("WATES    : " + WATES);
+tulis("Status   : " + status);
+tulis("Mati     : " + mati);
+
+// ========================================
+// 2. OPERATOR ARITMATIKA (+, -, *, /)
+// ========================================
+tulis("\n=== 2. OPERATOR ARITMATIKA ===");
+wadah tambah = 10 + 5;
+wadah kurang = 10 - 3;
+wadah kali = 4 * 6;
+wadah bagi = 20 / 4;
+wadah negatif = -7;           // Unary minus
+
+tulis("10 + 5  = " + tambah);
+tulis("10 - 3  = " + kurang);
+tulis("4 * 6   = " + kali);
+tulis("20 / 4  = " + bagi);
+tulis("Negatif = " + negatif);
+
+// ========================================
+// 3. OPERATOR PERBANDINGAN (==, !=, <, >, <=, >=)
+// ========================================
+tulis("\n=== 3. OPERATOR PERBANDINGAN ===");
+wadah a = 10;
+wadah b = 20;
+
+yen (a == 10) {
+    tulis("a == 10 : BENER");
 }
 
-// 2. Deklarasi Variabel
-wadah angka_awal = 10;
-ginaris wates = 3; // Menggunakan ginaris (const) karena 'wates' tidak berubah
+yen (a != b) {
+    tulis("a != b  : BENER (10 != 20)");
+}
 
-tulis("--- PROGRAM AWAL BOSOJOWO ---");
-tulis("Angka awal: " + angka_awal);
+yen (a < b) {
+    tulis("a < b   : BENER (10 < 20)");
+}
 
-// 3. Percabangan yen - liyane yen - liyane (if-elif-else)
-yen (angka_awal > 15 lan bener) {
-    tulis("Kondisi bener: angka_awal pancen luwih gede tinimbang limalas!");
-} liyane yen (angka_awal > 5) {
-    tulis("Kondisi bener: angka_awal pancen luwih gede tinimbang limo!");
+yen (b > a) {
+    tulis("b > a   : BENER (20 > 10)");
+}
+
+yen (a <= 10) {
+    tulis("a <= 10 : BENER");
+}
+
+yen (b >= 15) {
+    tulis("b >= 15 : BENER (20 >= 15)");
+}
+
+// ========================================
+// 4. OPERATOR LOGIKA (lan, utawa, ora)
+// ========================================
+tulis("\n=== 4. OPERATOR LOGIKA ===");
+
+yen (bener lan bener) {
+    tulis("bener LAN bener  = BENER (AND)");
+}
+
+yen (salah utawa bener) {
+    tulis("salah UTAWA bener = BENER (OR)");
+}
+
+yen (ora salah) {
+    tulis("ORA salah         = BENER (NOT)");
+}
+
+yen (a > 5 lan b < 25) {
+    tulis("a > 5 LAN b < 25 = BENER (kombinasi)");
+}
+
+yen (a == 99 utawa b == 20) {
+    tulis("a == 99 UTAWA b == 20 = BENER (salah satu cocok)");
+}
+
+// ========================================
+// 5. PERCABANGAN (yen / liyane yen / liyane)
+// ========================================
+tulis("\n=== 5. PERCABANGAN (IF/ELIF/ELSE) ===");
+
+yen (angka > 15) {
+    tulis("angka luwih gede tinimbang 15");
+} liyane yen (angka > 5) {
+    tulis("angka luwih gede tinimbang 5 nanging kurang saka 16");
 } liyane {
-    tulis("Kondisi salah!");
+    tulis("angka cilik banget");
 }
 
-// 4. Perulangan kanggo (for loop)
-tulis("\n--- PERULANGAN KANGGO (FOR LOOP) ---");
-kanggo (wadah i = 0; i < wates; i = i + 1) {
-    wadah hasil = petung_tambah_ping_loro(angka_awal, i);
-    tulis("Indeks perulangan ke-" + i + ", Hasil: " + hasil);
+// ========================================
+// 6. DEKLARASI & PEMANGGILAN FUNGSI
+// ========================================
+tulis("\n=== 6. FUNGSI & RETURN ===");
+
+fungsi tambah_loro(x, y) {
+    balekno x + y;
 }
 
-// 5. Perulangan suwene (while loop)
-tulis("\n--- PERULANGAN SUWENE (WHILE LOOP) ---");
+fungsi luas_persegi(sisi) {
+    balekno sisi * sisi;
+}
+
+fungsi sapa(jeneng) {
+    balekno "Halo, " + jeneng + "! Sugeng rawuh!";
+}
+
+wadah hasil_tambah = tambah_loro(15, 25);
+wadah hasil_luas = luas_persegi(7);
+wadah pesan = sapa(nama);
+
+tulis("tambah_loro(15, 25) = " + hasil_tambah);
+tulis("luas_persegi(7)     = " + hasil_luas);
+tulis(pesan);
+
+// ========================================
+// 7. PERULANGAN KANGGO (FOR LOOP)
+// ========================================
+tulis("\n=== 7. PERULANGAN KANGGO (FOR) ===");
+
+kanggo (wadah i = 0; i < WATES; i = i + 1) {
+    wadah hasil = tambah_loro(angka, i);
+    tulis("kanggo ke-" + i + " -> hasil: " + hasil);
+}
+
+// ========================================
+// 8. PERULANGAN SUWENE (WHILE LOOP)
+// ========================================
+tulis("\n=== 8. PERULANGAN SUWENE (WHILE) ===");
+
 wadah counter = 1;
-suwene (counter <= 2) {
-    tulis("Counter suwene saiki: " + counter);
+suwene (counter <= 3) {
+    tulis("counter suwene: " + counter);
     counter = counter + 1;
 }
 
-tulis("\nProgram BosoJowo rampung kanthi sukses!");
+// ========================================
+// 9. STRING CONCATENATION (PENGGABUNGAN)
+// ========================================
+tulis("\n=== 9. STRING CONCATENATION ===");
+tulis("Nama: " + nama + " | Angka: " + angka + " | Desimal: " + desimal);
+
+// ========================================
+// SELESAI
+// ========================================
+tulis("\n==========================================");
+tulis("Program BosoJowo rampung kanthi sukses!");
+tulis("Kabeh fitur wis diuji lan bener kabeh!");
+tulis("==========================================");
